@@ -1,6 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
-#include<alloc.h>
+#include<malloc.h>
 #include<stdlib.h>
 
 struct node
@@ -210,11 +209,10 @@ void printlist(LIST *start)
     printf("\b\b\b\n");
   }
 
-void main()
+int main()
 {
    LIST *head;
    int count=0,ch=1;
-   clrscr();
    head = NULL;
    printf("Creation of Linked List.....\n");
    head = createlist(head,&count);
@@ -256,7 +254,7 @@ void main()
 	default: printf("ERROR ! Entered wrong choice.....Try again.....\n");
       }
      }
-   getch();
+   return(0);
 }
 
 LIST* insertatpos(LIST *start,int *count)
